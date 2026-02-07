@@ -1,0 +1,170 @@
+﻿
+> [previous 
+exception] [object] 
+(PDOException(code: 
+1049): 
+SQLSTATE[HY000] 
+[1049] Unknown 
+database 
+'luh_ujikom' at C:/Pr
+oject/luh_ujikom/vend
+or/laravel/framework/
+src/Illuminate/Databa
+se/Connectors/Connect
+or.php:66)
+  [stacktrace]
+  #0 C:/Project/luh_u
+jikom/vendor/laravel/
+framework/src/Illumin
+ate/Database/Connecto
+rs/Connector.php(66):
+ PDO->__construct('my
+sql:host=127....', 
+'root', Object(Sensit
+iveParameterValue), 
+Array)
+  #1 C:/Project/luh_u
+jikom/vendor/laravel/
+framework/src/Illumin
+ate/Database/Connecto
+rs/Connector.php(44):
+ Illuminate/Database/
+Connectors/Connector-
+>createPdoConnection(
+'mysql:host=127....',
+ 'root', Object(Sensi
+tiveParameterValue), 
+Array)
+  #2 C:/Project/luh_u
+jikom/vendor/laravel/
+framework/src/Illumin
+ate/Database/Connecto
+rs/MySqlConnector.php
+(24): Illuminate/Data
+base/Connectors/Conne
+ctor->createConnectio
+n('mysql:host=127....
+', Array, Array)
+  #3 C:/Project/luh_u
+jikom/vendor/laravel/
+framework/src/Illumin
+ate/Database/Connecto
+rs/ConnectionFactory.
+php(186): Illuminate/
+Database/Connectors/M
+ySqlConnector->connec
+t(Array)
+> [2026-02-06 
+15:25:11] 
+local.ERROR: An 
+error occurred {"exce
+ption":"[object] (PHP
+OpenSourceSaver\\JWTA
+uth\\Exceptions\\Secr
+etMissingException(co
+de: 0): An error 
+occurred at C:/Projec
+t/luh_ujikom/vendor/p
+hp-open-source-saver/
+jwt-auth/src/Provider
+s/JWT/Provider.php:47
+)
+  [stacktrace]
+  #0 C:/Project/luh_u
+jikom/vendor/php-open
+-source-saver/jwt-aut
+h/src/Providers/JWT/L
+cobucci.php(76): PHPO
+penSourceSaver/JWTAut
+h/Providers/JWT/Provi
+der->__construct(NULL
+, 'HS256', Array)
+  #1 C:/Project/luh_u
+jikom/vendor/php-open
+-source-saver/jwt-aut
+h/src/Providers/Abstr
+actServiceProvider.ph
+p(174): PHPOpenSource
+Saver/JWTAuth/Provide
+rs/JWT/Lcobucci->__co
+nstruct(NULL, 
+'HS256', Array)
+  #2 C:/Project/luh_u
+jikom/vendor/laravel/
+framework/src/Illumin
+ate/Container/Contain
+er.php(1115): PHPOpen
+SourceSaver/JWTAuth/P
+roviders/AbstractServ
+iceProvider->PHPOpenS
+ourceSaver/JWTAuth/Pr
+oviders/{closure}(Obj
+ect(Illuminate/Founda
+tion/Application), 
+Array)
+  #3 C:/Project/luh_u
+jikom/vendor/laravel/
+framework/src/Illumin
+ate/Container/Contain
+er.php(933): Illumina
+te/Container/Containe
+r->build(Object(Closu
+re))
+> [2026-02-06 
+15:27:31] 
+local.ERROR: An 
+error occurred {"exce
+ption":"[object] (PHP
+OpenSourceSaver\\JWTA
+uth\\Exceptions\\Secr
+etMissingException(co
+de: 0): An error 
+occurred at C:/Projec
+t/luh_ujikom/vendor/p
+hp-open-source-saver/
+jwt-auth/src/Provider
+s/JWT/Provider.php:47
+)
+  [stacktrace]
+  #0 C:/Project/luh_u
+jikom/vendor/php-open
+-source-saver/jwt-aut
+h/src/Providers/JWT/L
+cobucci.php(76): PHPO
+penSourceSaver/JWTAut
+h/Providers/JWT/Provi
+der->__construct(NULL
+, 'HS256', Array)
+  #1 C:/Project/luh_u
+jikom/vendor/php-open
+-source-saver/jwt-aut
+h/src/Providers/Abstr
+actServiceProvider.ph
+p(174): PHPOpenSource
+Saver/JWTAuth/Provide
+rs/JWT/Lcobucci->__co
+nstruct(NULL, 
+'HS256', Array)
+  #2 C:/Project/luh_u
+jikom/vendor/laravel/
+framework/src/Illumin
+ate/Container/Contain
+er.php(1115): PHPOpen
+SourceSaver/JWTAuth/P
+roviders/AbstractServ
+iceProvider->PHPOpenS
+ourceSaver/JWTAuth/Pr
+oviders/{closure}(Obj
+ect(Illuminate/Founda
+tion/Application), 
+Array)
+  #3 C:/Project/luh_u
+jikom/vendor/laravel/
+framework/src/Illumin
+ate/Container/Contain
+er.php(933): Illumina
+te/Container/Containe
+r->build(Object(Closu
+re))
+
+
