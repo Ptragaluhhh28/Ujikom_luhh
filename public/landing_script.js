@@ -9,6 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial Mockup Load
     changeMockup("owner");
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        htmlElement.classList.add('dark');
+    }
+
+    // Toggle dark mode
+    themeToggle.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+        const theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+    });
 });
 
 // Mockup Data / Templates
@@ -105,7 +122,7 @@ const mockups = {
             <div class="grid grid-cols-2 gap-6 overflow-y-auto pr-2">
                 <div class="group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-3xl mb-3 overflow-hidden transition-all group-hover:shadow-xl group-hover:scale-[1.02]">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Vespa" class="w-full h-full object-cover">
+                        <img src="/storage/documents/Vespa.jpg" alt="Vespa" class="w-full h-full object-cover">
                     </div>
                     <p class="font-bold text-dark font-display">Vespa Primavera</p>
                     <div class="flex justify-between items-center mt-1">
@@ -117,7 +134,7 @@ const mockups = {
                 </div>
                 <div class="group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-3xl mb-3 overflow-hidden transition-all group-hover:shadow-xl group-hover:scale-[1.02]">
-                        <img src="https://images.unsplash.com/photo-1606664515524-2b8c3938fbc2?w=400&h=300&fit=crop" alt="Kawasaki Ninja" class="w-full h-full object-cover">
+                        <img src="/storage/documents/Kawasaki Ninja.jpg" alt="Kawasaki Ninja" class="w-full h-full object-cover">
                     </div>
                     <p class="font-bold text-dark font-display">Kawasaki Ninja</p>
                     <div class="flex justify-between items-center mt-1">

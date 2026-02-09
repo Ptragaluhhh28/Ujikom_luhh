@@ -14,6 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -34,10 +35,10 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-dark overflow-x-hidden">
+<body class="bg-gray-50 dark:bg-slate-950 text-dark dark:text-gray-100 overflow-x-hidden transition-colors duration-300">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 py-4">
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 py-4 transition-colors duration-300">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2 text-2xl font-display font-bold text-primary">
                 <img src="{{ asset('storage/documents/image/logo motor.jpg') }}" alt="Logo" style="height: 48px; width: auto; border-radius: 10px;">
@@ -50,6 +51,10 @@
                 <a href="#preview" class="hover:text-primary transition-colors">Preview</a>
             </div>
             <div class="flex items-center gap-4">
+                <button id="themeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle dark mode">
+                    <i class="fas fa-sun text-xl text-yellow-500 dark:hidden"></i>
+                    <i class="fas fa-moon text-xl text-blue-400 hidden dark:inline"></i>
+                </button>
                 <a href="/login" class="hidden sm:block font-semibold hover:text-primary transition-colors">Login</a>
                 <a href="/register" class="bg-primary text-white px-6 py-2 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">Daftar</a>
             </div>
@@ -76,7 +81,7 @@
                 <a href="#features" class="bg-primary text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-primary/25 hover:bg-blue-700 transition-colors">
                     Lihat Fitur <i class="fas fa-arrow-right ml-2"></i>
                 </a>
-                <a href="#preview" class="bg-white border-2 border-gray-200 px-8 py-4 rounded-2xl font-bold text-lg hover:border-primary transition-colors">
+                <a href="#preview" class="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-gray-700 px-8 py-4 rounded-2xl font-bold text-lg hover:border-primary dark:hover:border-primary transition-colors">
                     Demo Aplikasi
                 </a>
             </div>
@@ -84,12 +89,11 @@
         </div>
         
         <!-- Background Elements -->
-        <div class="absolute top-0 right-0 -z-10 w-1/3 h-1/2 bg-gradient-to-l from-blue-50 to-transparent rounded-bl-full"></div>
-        <div class="absolute bottom-0 left-0 -z-10 w-1/4 h-1/3 bg-gradient-to-tr from-blue-50 to-transparent rounded-tr-full"></div>
+        <div class="absolute bottom-0 left-0 right-0 top-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-none dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="w-full md:w-1/2" data-aos="fade-right">
@@ -104,7 +108,7 @@
                     <h2 class="text-3xl md:text-5xl font-display font-bold mt-4 mb-6 leading-tight">
                         Solusi Cerdas untuk Manajemen <br> Rental Motor Anda
                     </h2>
-                    <p class="text-secondary text-lg mb-8 leading-relaxed">
+                    <p class="text-secondary dark:text-gray-400 text-lg mb-8 leading-relaxed">
                         Manajemen persewaan motor konvensional seringkali mengalami kendala dalam pendataan unit, transparansi bagi hasil dengan pemilik motor, dan pelacakan pembayaran dari penyewa. 
                     </p>
                 </div>
@@ -113,17 +117,17 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-24 bg-gray-50 overflow-hidden">
+    <section id="features" class="py-24 bg-gray-50 dark:bg-slate-950 overflow-hidden transition-colors duration-300">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
                 <span class="text-primary font-bold tracking-widest uppercase">Fitur Role-Based</span>
                 <h2 class="text-3xl md:text-5xl font-display font-bold mt-4 mb-6 italic">Satu Sistem, Berbagai Peran</h2>
-                <p class="text-secondary text-lg">Platform kami dirancang khusus untuk memenuhi kebutuhan unik setiap pengguna dalam ekosistem persewaan motor.</p>
+                <p class="text-secondary dark:text-gray-400 text-lg">Platform kami dirancang khusus untuk memenuhi kebutuhan unik setiap pengguna dalam ekosistem persewaan motor.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto px-4">
                 <!-- Owner Features -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group hover:bg-orange-500 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700 group hover:bg-orange-500 dark:hover:bg-orange-500 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-500 text-2xl mb-6 group-hover:bg-white/20 group-hover:text-white transition-colors">
                         <i class="fas fa-id-badge"></i>
                     </div>
@@ -137,7 +141,7 @@
                 </div>
 
                 <!-- Renter Features -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group hover:bg-emerald-600 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700 group hover:bg-emerald-600 dark:hover:bg-emerald-600 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 text-2xl mb-6 group-hover:bg-white/20 group-hover:text-white transition-colors">
                         <i class="fas fa-users"></i>
                     </div>
@@ -154,7 +158,7 @@
     </section>
 
     <!-- Flow Section -->
-    <section id="flow" class="py-24 bg-white relative">
+    <section id="flow" class="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20" data-aos="fade-up">
                 <span class="text-primary font-bold tracking-widest uppercase">Alur Kerja</span>
@@ -170,7 +174,7 @@
                     <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0" data-aos="fade-up">
                         <div class="md:w-1/2 md:pr-16 text-left md:text-right">
                             <h4 class="text-2xl font-bold mb-2 italic">1. Pendaftaran Unit</h4>
-                            <p class="text-secondary">Pemilik motor mendaftarkan unit motor lengkap dengan foto dan dokumen STNK.</p>
+                            <p class="text-secondary dark:text-gray-400">Pemilik motor mendaftarkan unit motor lengkap dengan foto dan dokumen STNK.</p>
                         </div>
                         <div class="relative z-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">1</div>
                         <div class="md:w-1/2 md:pl-16"></div>
@@ -182,7 +186,7 @@
                         <div class="relative z-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">2</div>
                         <div class="md:w-1/2 md:pl-16">
                             <h4 class="text-2xl font-bold mb-2 italic">2. Verifikasi Dokumen</h4>
-                            <p class="text-secondary">Sistem memvalidasi dokumen dan menetapkan tarif (Harian, Mingguan, Bulanan).</p>
+                            <p class="text-secondary dark:text-gray-400">Sistem memvalidasi dokumen dan menetapkan tarif (Harian, Mingguan, Bulanan).</p>
                         </div>
                     </div>
                     
@@ -190,7 +194,7 @@
                     <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0" data-aos="fade-up">
                         <div class="md:w-1/2 md:pr-16 text-left md:text-right">
                             <h4 class="text-2xl font-bold mb-2 italic">3. Pemesanan Renter</h4>
-                            <p class="text-secondary">Penyewa mencari motor yang tersedia, memilih durasi, dan melakukan booking.</p>
+                            <p class="text-secondary dark:text-gray-400">Penyewa mencari motor yang tersedia, memilih durasi, dan melakukan booking.</p>
                         </div>
                         <div class="relative z-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">3</div>
                         <div class="md:w-1/2 md:pl-16"></div>
@@ -202,7 +206,7 @@
                         <div class="relative z-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">4</div>
                         <div class="md:w-1/2 md:pl-16">
                             <h4 class="text-2xl font-bold mb-2 italic">4. Transaksi & Laporan</h4>
-                            <p class="text-secondary">Setelah pembayaran dikonfirmasi, sistem otomatis membuat laporan bagi hasil secara real-time.</p>
+                            <p class="text-secondary dark:text-gray-400">Setelah pembayaran dikonfirmasi, sistem otomatis membuat laporan bagi hasil secara real-time.</p>
                         </div>
                     </div>
                 </div>
