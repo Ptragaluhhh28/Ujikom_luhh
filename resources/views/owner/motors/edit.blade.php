@@ -76,15 +76,15 @@
         <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:1rem">
             <div class="form-group">
                 <label class="form-label">Tarif Harian (Rp)</label>
-                <input type="number" id="harian" class="form-control" required>
+                <input type="number" id="harian" class="form-control" min="0" required>
             </div>
             <div class="form-group">
                 <label class="form-label">Tarif Mingguan (Rp)</label>
-                <input type="number" id="mingguan" class="form-control" required>
+                <input type="number" id="mingguan" class="form-control" readonly style="background:#f8fafc">
             </div>
             <div class="form-group">
                 <label class="form-label">Tarif Bulanan (Rp)</label>
-                <input type="number" id="bulanan" class="form-control" required>
+                <input type="number" id="bulanan" class="form-control" readonly style="background:#f8fafc">
             </div>
         </div>
 
@@ -125,6 +125,20 @@
             container.style.display = 'none';
         }
     }
+
+    // Auto-calculate rates
+    document.getElementById('harian').addEventListener('keydown', function(e) {
+        if (['e', 'E', '+', '-', '.'].includes(e.key)) {
+            e.preventDefault();
+        }
+    });
+
+    document.getElementById('harian').addEventListener('input', function() {
+        if (this.value < 0) this.value = 0;
+        const harian = parseFloat(this.value) || 0;
+        document.getElementById('mingguan').value = Math.round(harian * 7);
+        document.getElementById('bulanan').value = Math.round(harian * 30);
+    });
 
     async function fetchMotor() {
         const res = await fetch(`/api/owner/motors/${motorId}`, {

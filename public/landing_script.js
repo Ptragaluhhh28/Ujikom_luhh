@@ -1,14 +1,14 @@
 // Initialize AOS (Animate on Scroll)
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     AOS.init({
         duration: 1000,
-        easing: 'ease-out-cubic',
+        easing: "ease-out-cubic",
         once: true,
-        offset: 100
+        offset: 100,
     });
 
     // Initial Mockup Load
-    changeMockup('owner');
+    changeMockup("owner");
 });
 
 // Mockup Data / Templates
@@ -105,9 +105,7 @@ const mockups = {
             <div class="grid grid-cols-2 gap-6 overflow-y-auto pr-2">
                 <div class="group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-3xl mb-3 overflow-hidden transition-all group-hover:shadow-xl group-hover:scale-[1.02]">
-                        <div class="w-full h-full flex items-center justify-center text-gray-300">
-                           <i class="fas fa-image text-3xl"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Vespa" class="w-full h-full object-cover">
                     </div>
                     <p class="font-bold text-dark font-display">Vespa Primavera</p>
                     <div class="flex justify-between items-center mt-1">
@@ -119,9 +117,7 @@ const mockups = {
                 </div>
                 <div class="group">
                     <div class="aspect-[4/3] bg-gray-100 rounded-3xl mb-3 overflow-hidden transition-all group-hover:shadow-xl group-hover:scale-[1.02]">
-                        <div class="w-full h-full flex items-center justify-center text-gray-300">
-                           <i class="fas fa-image text-3xl"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1606664515524-2b8c3938fbc2?w=400&h=300&fit=crop" alt="Kawasaki Ninja" class="w-full h-full object-cover">
                     </div>
                     <p class="font-bold text-dark font-display">Kawasaki Ninja</p>
                     <div class="flex justify-between items-center mt-1">
@@ -133,60 +129,62 @@ const mockups = {
                 </div>
             </div>
         </div>
-    `
+    `,
 };
 
 // Mockup Switcher Function
 function changeMockup(role) {
-    const display = document.getElementById('mockupDisplay');
-    const tabs = document.querySelectorAll('.mockup-tab');
-    
+    const display = document.getElementById("mockupDisplay");
+    const tabs = document.querySelectorAll(".mockup-tab");
+
     // Update Tabs UI
-    tabs.forEach(tab => {
-        tab.classList.remove('active');
-        const iconContainer = tab.querySelector('div');
-        iconContainer.classList.remove('bg-primary');
-        iconContainer.classList.add('bg-gray-700');
-        const label = tab.querySelector('span');
+    tabs.forEach((tab) => {
+        tab.classList.remove("active");
+        const iconContainer = tab.querySelector("div");
+        iconContainer.classList.remove("bg-primary");
+        iconContainer.classList.add("bg-gray-700");
+        const label = tab.querySelector("span");
         if (label) {
-            label.classList.add('text-gray-400');
-            label.classList.remove('text-white');
+            label.classList.add("text-gray-400");
+            label.classList.remove("text-white");
         }
     });
 
-    const activeTab = Array.from(tabs).find(t => t.innerText.toLowerCase().includes(role));
+    const activeTab = Array.from(tabs).find((t) =>
+        t.innerText.toLowerCase().includes(role),
+    );
     if (activeTab) {
-        activeTab.classList.add('active');
-        const activeIcon = activeTab.querySelector('div');
+        activeTab.classList.add("active");
+        const activeIcon = activeTab.querySelector("div");
         if (activeIcon) {
-            activeIcon.classList.remove('bg-gray-700');
-            activeIcon.classList.add('bg-primary');
+            activeIcon.classList.remove("bg-gray-700");
+            activeIcon.classList.add("bg-primary");
         }
-        const activeLabel = activeTab.querySelector('span');
+        const activeLabel = activeTab.querySelector("span");
         if (activeLabel) {
-            activeLabel.classList.remove('text-gray-400');
-            activeLabel.classList.add('text-white');
+            activeLabel.classList.remove("text-gray-400");
+            activeLabel.classList.add("text-white");
         }
     }
 
     // Animation transition
-    display.style.opacity = '0';
-    display.style.transform = 'translateY(10px)';
-    
+    display.style.opacity = "0";
+    display.style.transform = "translateY(10px)";
+
     setTimeout(() => {
         display.innerHTML = mockups[role];
-        display.style.opacity = '1';
-        display.style.transform = 'translateY(0)';
-        display.style.transition = 'all 0.4s ease-out';
+        display.style.opacity = "1";
+        display.style.transform = "translateY(0)";
+        display.style.transition = "all 0.4s ease-out";
     }, 200);
 }
 
 // Smooth Scrolling for all links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
         });
     });
 });

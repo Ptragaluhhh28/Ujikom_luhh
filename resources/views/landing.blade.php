@@ -123,7 +123,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto px-4">
                 <!-- Owner Features -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group hover:bg-primary transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group hover:bg-orange-500 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-500 text-2xl mb-6 group-hover:bg-white/20 group-hover:text-white transition-colors">
                         <i class="fas fa-id-badge"></i>
                     </div>
@@ -135,9 +135,9 @@
                         <li class="flex items-center gap-3"><i class="fas fa-check-circle text-emerald-500 group-hover:text-white"></i> Upload Dokumen Unit</li>
                     </ul>
                 </div>
-                
+
                 <!-- Renter Features -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group hover:bg-primary transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group hover:bg-emerald-600 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 text-2xl mb-6 group-hover:bg-white/20 group-hover:text-white transition-colors">
                         <i class="fas fa-users"></i>
                     </div>
@@ -247,47 +247,6 @@
                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <span class="text-primary font-bold tracking-widest uppercase">Keunggulan</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold mt-4 italic">Mengapa Memilih Kami?</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center text-primary text-3xl mx-auto mb-6">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 italic">Terintegrasi</h4>
-                    <p class="text-secondary">Satu platform untuk semua stakeholder dengan sinkronisasi data real-time.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 text-3xl mx-auto mb-6">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 italic">Otomatis</h4>
-                    <p class="text-secondary">Perhitungan tarif dan sistem bagi hasil yang akurat tanpa manual.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center text-orange-500 text-3xl mx-auto mb-6">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 italic">Laporan Detail</h4>
-                    <p class="text-secondary">Ekspor laporan bulanan dan grafik performa bisnis Anda.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center text-purple-500 text-3xl mx-auto mb-6">
-                        <i class="fas fa-mobile"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 italic">User Friendly</h4>
-                    <p class="text-secondary">Tampilan modern yang nyaman digunakan di perangkat apa pun.</p>
                 </div>
             </div>
         </div>

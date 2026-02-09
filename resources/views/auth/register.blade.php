@@ -68,7 +68,7 @@
         text-decoration: none;
         font-weight: 600;
     }
-    #guestLinks {
+    #guestLinks, #authLinks {
         display: none !important;
     }
 @endsection
